@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SBG-PORTAL</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+
+    </head>
+
+    <body>
+          
+        <section class="section-book">
+            <div class="u-margin-bottom-medium u-center-text">
+                <h2 class="heading-secondary" style="font-size: 4.1rem;">SBG-Dashboard Registration</h2>
+            </div>
+            
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form u-margin-bottom-medium">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Sign up
+                                </h2>    
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" pattern="^.+?@daiict.ac.in$" required class="form__input" id="email" placeholder="Email Address" oninvalid="this.setCustomValidity('Please use @daiict.ac.in account')" oninput="this.setCustomValidity('')">
+                                <label for="email" class="form__label">Email Address</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="password" class="form__input" id="password" placeholder="Password" required>
+                                <label for="password" class="form__label">Password</label>    
+                            </div>
+                          
+                            <div class="form__group">
+                                <button class="btn btn--green">Sign Up &rarr;</button>
+                            </div>
+
+                        </form>
+
+                        <div class="form__group u-margin-bottom-medium">
+                            <h3 class="heading-tertiary" style="display: inline-block;">Already have an account?</h3> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="./login.html" class="btn-text">Sign In &rarr;</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>    

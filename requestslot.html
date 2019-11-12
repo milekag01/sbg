@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SBG-PORTAL</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+          
+        <section class="section-book">
+            
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form u-margin-bottom-medium">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Slotting Information
+                                </h2>    
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" required class="form__input" id="eventname" placeholder="Event Name">
+                                <label for="eventname" class="form__label">Event Name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="description" placeholder="Description" required>
+                                <label for="description" class="form__label">Description</label>    
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="time" placeholder="Time" required>
+                                <label for="time" class="form__label">Time</label>    
+                            </div>
+
+
+                                <div class="form__group u-margin-bottom-medium">
+                                        <select class="form__input" id="venue" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                                            <option value="">Venue</option>
+                                            <option value="LAB 001">LAB 001</option>
+                                            <option value="LAB 002">LAB 002</option>
+                                            <option value="LAB 003">LAB 003</option>
+                                            <option value="LAB 004">LAB 004</option>
+                                            <option value="LAB 005">LAB 005</option>
+                                            <option value="LAB 006">LAB 006</option>
+                                            <option value="LAB 007">LAB 007</option>
+                                            <option value="LAB 008">LAB 008</option>
+                                            <option value="LAB 001">LAB 011</option>
+                                            
+                                            <option value="LAB 101">LAB 101</option>
+                                            <option value="LAB 102">LAB 102</option>
+                                            <option value="LAB 103">LAB 103</option>
+                                            <option value="LAB 104">LAB 104</option>
+                                            <option value="LAB 105">LAB 105</option>
+                                            <option value="LAB 106">LAB 106</option>
+                                            <option value="LAB 107">LAB 107</option>
+                                            <option value="LAB 108">LAB 108</option>
+                                          
+                                            
+                                            <option value="LAB 201">LAB 201</option>
+                                            <option value="LAB 202">LAB 202</option>
+                                            <option value="LAB 203">LAB 203</option>
+                                            <option value="LAB 204">LAB 204</option>
+                                            <option value="LAB 205">LAB 205</option>
+                                            <option value="LAB 206">LAB 206</option>
+                                            <option value="LAB 207">LAB 207</option>
+                                            <option value="LAB 208">LAB 208</option>
+                                            <option value="LAB 209">LAB 209</option>
+                                            <option value="LAB 210">LAB 210</option>
+                                            <option value="LAB 211">LAB 211</option>
+                                            <option value="LAB 212">LAB 213</option>
+                                            
+                                   
+                                            <option value="CEP 012(Conference Room)">CEP 012(Conference Room)</option>
+                                            <option value="CEP 102(Mini Auditorium)">CEP 102(Mini Auditorium)</option>
+                                            <option value="CEP 103">CEP 103</option>
+                                            <option value="CEP 104">CEP 104</option>
+                                            <option value="CEP 105">CEP 105</option>
+                                            <option value="CEP 106">CEP 106</option>
+                                            <option value="CEP 107">CEP 107</option>
+                                            <option value="CEP 108">CEP 108</option>
+                                            <option value="CEP 109">CEP 109</option>
+                                            <option value="CEP 110">CEP 110</option>
+                                          
+                                            
+                                            <option value="CEP 201">CEP 201</option>
+                                            <option value="CEP 202">CEP 202</option>
+                                            <option value="CEP 203">CEP 203</option>
+                                            <option value="CEP 204">CEP 204</option>
+                                            <option value="CEP 205">CEP 205</option>
+                                            <option value="CEP 206">CEP 206</option>
+                                            <option value="CEP 207">CEP 207</option>
+                                            <option value="CEP 208">CEP 208</option>
+                                            <option value="CEP 209">CEP 209</option>
+                                            <option value="CEP 210">CEP 210</option>
+                                            <option value="CEP 211">CEP 211</option>
+                                            <option value="CEP FOYER">CEP FOYER</option>
+                                            <option value="LT 1">LT 1</option>
+                                            <option value="LT 2">LT 2</option>
+                                            <option value="LT 3">LT 3</option>
+                                            <option value="LT FOYER">LT Foyer</option>
+                                            <option value="OAT">OAT</option>
+                                            <option value="SAC Ground">SAC Ground</option>
+                                            <option value="SAC INDOOR">SAC Indoor</option>
+                                            <option value="SAC Building">SAC Building</option>
+                                            <option value="Outside Cafeteria">Outside Cafeteria</option>
+                                            <option value="Faculty Mess">Faculty Mess</option>
+                                            
+                                        </select>
+                            </div>
+
+                         
+                            <div class="form__group">
+                                <button class="btn btn--green">Submit Request &rarr;</button>
+                            </div>
+                          
+                            
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+    <script src="main.js"></script>
+</html>    

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SBG-PORTAL</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        
+
+    </head>
+
+    <body>
+          <a href="#login-form" rel="modal:open">open</a>
+
+            <div class="book__form modal" id="login-form">
+                <form action="#" class="form u-margin-bottom-medium">
+                    <div class="u-margin-bottom-medium">
+                        <h2 class="heading-secondary">
+                            New Issue
+                        </h2>    
+                    </div>
+
+                    <div class="form__group">
+                        <textarea name="issue" id="issue" cols="30" rows="10" class="form__input" placeholder="Add New Issue"></textarea>
+                        <label for="issue" class="form__label">Typing...</label>
+                    </div>                          
+
+                    <div class="form__group">
+                        <button class="btn btn--green">Submit &rarr;</button>
+                    </div>
+                </form>
+            </div>
+                   
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    
+    <script src="main.js"></script>
+    <script>
+        $('a.open-modal').click(function(event) {
+         $("#fade").modal({
+            fadeDuration: 80
+        });
+        });
+    </script>
+
+</html>    

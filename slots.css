@@ -1,0 +1,104 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+
+  /*using inheritance in universal selector*/
+}
+
+
+html {
+  font-size: 62.5%; }
+  
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-family: "Lato",sans-serif;
+  /* font-size: 16px; */
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7; 
+    
+}
+
+.slots {
+    padding: 10rem 0;
+    padding-top: 4rem;
+    /* height: 100vh; */
+    background-color: #eaedf1;
+}
+
+.wrapper {
+    background: rgba(57,65,98,0.9);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .upper {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    /* font-weight: 400;
+    font-size: 24px;
+    line-height: 2; */
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .meetup {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+  }
+  
+  .group {
+    flex-grow: 1;
+  }
+  
+  .icon {
+    display: inline-block;
+    position: relative;
+    top: -.1em;
+    vertical-align: middle;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .row-card__item {
+    padding-left: 10px;
+  }
+
+  .row {
+      max-width: 114rem;
+  }

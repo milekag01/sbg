@@ -1,0 +1,555 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SBG-Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="shortcut icon" type="image/png" href="#"> -->
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="dashboardform.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="dashboard.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="popup.css" /> -->
+    
+    
+</head>
+<body>
+    <div class="grid">
+
+  <!-- HEADER------------------------------------------------------------------------------------------------->
+
+        <header class="header">
+          <i class="fas fa-bars header__menu"></i>
+          <div class="header__search">
+            <input class="header__input" placeholder="Search..." />
+          </div>
+
+          <div class="header__avatar">
+            <div class="dropdown">
+              <ul class="dropdown__list">
+
+                <li class="dropdown__list-item">
+                  <span class="dropdown__icon"><i class="fas fa-clipboard-list"></i></span>
+                  <span class="dropdown__title"><a href="#">my account</a></span>
+                </li>
+                <li class="dropdown__list-item">
+                  <span class="dropdown__icon"><i class="fas fa-sign-out-alt"></i></span>
+                  <span class="dropdown__title"><a href="#">log out</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      
+<!-- SIDE-NAVBAR------------------------------------------------------------------------------------------------ -->
+
+        <aside class="sidenav">
+          <div class="sidenav__brand">
+            
+            <a class="sidenav__brand-link" href="#">SBG <span class="text-light"> DA-IICT</span></a>
+            <i class="fas fa-times sidenav__brand-close"></i>
+          </div>
+          <div class="sidenav__profile">
+            <div class="sidenav__profile-avatar"></div>
+            <div class="sidenav__profile-title text-light">201701066</div>
+          </div>
+          <div class="row row--align-v-center row--align-h-center">
+            <ul class="navList">
+              <li class="navList__heading">documents<i class="far fa-file-alt"></i></li>
+                <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
+                  <span class="navList__subheading-title">my event report</span>
+                </div>
+              </li>
+              
+              <li class="navList__heading">Issues<i class="far fa-edit"></i></li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-envelope"></i></span>
+                  <span class="navList__subheading-title">All Issues</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-eye"></i></span>
+                  <span class="navList__subheading-title">Resolved Issues</span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-book-open"></i></span>
+                  <span class="navList__subheading-title">my issues</span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-book-open"></i></span>
+                  <span class="navList__subheading-title"> <a href="#login-form" rel="modal:open" style="color: inherit;text-decoration: none;"> Report New Issue</a></span>
+                </div>
+              </li>
+              
+      
+              <!-- <li class="navList__heading">photo album<i class="far fa-image"></i></li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-mountain"></i></span>
+                  <span class="navList__subheading-title">vacation</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">cambodia</li>
+                  <li class="subList__item">new york</li>
+                </ul>
+              </li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
+                  <span class="navList__subheading-title">anniversary</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">dive trip</li>
+                  <li class="subList__item">hikathon</li>
+                  <li class="subList__item">buffalo river</li>
+                </ul>
+              </li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-graduation-cap"></i></span>
+                  <span class="navList__subheading-title">university</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">wild horse saloon</li>
+                  <li class="subList__item">service corps</li>
+                  <li class="subList__item">graduation</li>
+                  <li class="subList__item">internships</li>
+                </ul>
+              </li> -->
+      
+              <!-- <li class="navList__heading">statistics<i class="fas fa-chart-bar"></i></li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
+                  <span class="navList__subheading-title">finances</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">mortgage</li>
+                  <li class="subList__item">investments</li>
+                  <li class="subList__item">spend log</li>
+                  <li class="subList__item">owed</li>
+                </ul>
+              </li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-phone"></i></span>
+                  <span class="navList__subheading-title">call stats</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">last month</li>
+                  <li class="subList__item">bi-weekly</li>
+                  <li class="subList__item">yesterday</li>
+                  <li class="subList__item">today</li>
+                </ul>
+              </li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-plane"></i></span>
+                  <span class="navList__subheading-title">trip logs</span>
+                </div>
+                <ul class="subList subList--hidden">
+                  <li class="subList__item">amsterdam</li>
+                  <li class="subList__item">buenos aires</li>
+                  <li class="subList__item">cambodia</li>
+                  <li class="subList__item">greenland</li>
+                </ul>
+              </li> -->
+              
+              <li class="navList__heading">Events<i class="fas fa-calendar-alt"></i></li>
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
+                  <span class="navList__subheading-title">Upcoming events</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-school"></i></span>
+                  <span class="navList__subheading-title">past events</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                  <span class="navList__subheading-title">request events</span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                  <span class="navList__subheading-title">my events</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="navList__subheading row row--align-v-center">
+                  <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                  <span class="navList__subheading-title">see requested slots</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </aside>
+
+  <!-- DASHBOARD CONTENT ------------------------------------------------------------------------------------->
+      
+        <main class="main">
+          
+      <!-- JUMBOTRON -------------------------------------------------------------------------------------------->
+      
+          <div class="main-header">
+            <div class="main-header__intro-wrapper">
+              <div class="main-header__welcome">
+                <div class="main-header__welcome-title text-light">Welcome, <strong>Milek</strong></div>
+                <div class="main-header__welcome-subtitle text-light">How are you today?</div>
+              </div>
+              <div class="quickview">
+                <div class="quickview__item">
+                  <div class="quickview__item-total">41</div>
+                  <div class="quickview__item-description">
+                    <i class="far fa-calendar-alt"></i>
+                    <span class="text-light">Events</span>
+                  </div>
+                </div>
+                <div class="quickview__item">
+                  <div class="quickview__item-total">64</div>
+                  <div class="quickview__item-description">
+                    <i class="far fa-comment"></i>
+                    <span class="text-light">Issues</span>
+                  </div>
+                </div>
+                <div class="quickview__item">
+                  <div class="quickview__item-total">80</div>
+                  <div class="quickview__item-description">
+                    <i class="fas fa-envelope"></i>
+                    <span class="text-light">Event Reports</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- OVERVIEW CARDS ---------------------------------------------------------------------------------------->
+
+          <div class="main-overview">
+            <div class="overviewCard">
+              <div class="overviewCard-icon overviewCard-icon--document">
+                 <i class="far fa-file-alt"></i>
+              </div>
+              <div class="overviewCard-description">
+                <h3 class="overviewCard-title text-light">New <strong>Document</strong></h3>
+                <p class="overviewCard-subtitle">MSTC DOC</p>
+              </div>
+            </div>
+            
+            <div class="overviewCard">
+              <div class="overviewCard-icon overviewCard-icon--calendar">
+                 <i class="far fa-calendar-check"></i>
+              </div>
+              <div class="overviewCard-description">
+                <h3 class="overviewCard-title text-light">Upcoming <strong>Event</strong></h3>
+                <p class="overviewCard-subtitle">DTG Street Play</p>
+              </div>
+            </div>
+
+            <div class="overviewCard">
+              <div class="overviewCard-icon overviewCard-icon--mail">
+                 <i class="far fa-envelope"></i>
+              </div>
+              <div class="overviewCard-description">
+                <h3 class="overviewCard-title text-light">Requested <strong>Slots</strong></h3>
+                <p class="overviewCard-subtitle">+10</p>
+              </div>
+            </div>
+            
+            <div class="overviewCard">
+              <div class="overviewCard-icon overviewCard-icon--photo">
+                 <i class="far fa-file-image"></i>
+              </div>
+              <div class="overviewCard-description">
+                <h3 class="overviewCard-title text-light">New <strong>Issue</strong></h3>
+                <p class="overviewCard-subtitle">Cleaning of Hostel</p>
+              </div>
+            </div>
+          </div> 
+
+
+          <div class="main__cards">
+            
+            <div class="card" id="cards">
+             
+              <div class="card__header">
+                <div class="card__header-title text-light">SBG <strong>Issues</strong>
+                  <a href="#popup" class="card__header-link text-bold">&nbsp;&nbsp; Add Issue &nbsp;<i class="fas fa-plus"></i></a>
+                </div>
+                <!-- <div class="settings">
+                  <div class="settings__block"><i class="fas fa-edit"></i></div>
+                  <div class="settings__block"><i class="fas fa-cog"></i></div>
+                </div> -->
+              </div>
+              
+              <div class="card__main" style="overflow: auto;">
+
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="card__row">
+                    <div class="card__icon"><i class="fas fa-comment-dots"></i></div>
+                    
+                    <div class="card__time">
+                      <div>few sec ago</div>
+                    </div>
+                    <div class="card__detail">
+                        <div class="card__source text-bold">201701066</div>
+                        <div class="card__description">Please change the sbg meet timing.</div>
+
+                        <div class="card__note">
+                          <i class="fas fa-arrow-circle-up"></i> Upvote
+                        </div>
+                    
+                    </div>
+
+                </div>
+                
+                
+
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__header">
+                <div class="card__header-title text-light">Recent <strong>Documents</strong>
+                  <!-- <a href="#" class="card__header-link text-bold">View All</a> -->
+                </div>
+                <!-- <div class="settings">
+                  <div class="settings__block"><i class="fas fa-edit"></i></div>
+                  <div class="settings__block"><i class="fas fa-cog"></i></div>
+                </div> -->
+              </div>
+              <div class="card">
+                <div class="documents">
+                  <div class="document">
+                    <div class="document__img"></div>
+                    <div class="document__title">tesla-patents</div>
+                    <div class="document__date">07/16/2018</div>
+                  </div>
+                  <div class="document">
+                    <div class="document__img"></div>
+                    <div class="document__title">yearly-budget</div>
+                    <div class="document__date">09/04/2018</div>
+                  </div>
+                  <div class="document">
+                    <div class="document__img"></div>
+                    <div class="document__title">top-movies</div>
+                    <div class="document__date">10/10/2018</div>
+                  </div>
+                  <div class="document">
+                    <div class="document__img"></div>
+                    <div class="document__title">trip-itinerary</div>
+                    <div class="document__date">11/01/2018</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- 
+            <div class="card card--finance">
+              <div class="card__header">
+                <div class="card__header-title text-light">Monthly <strong>Spending</strong>
+                  <a href="#" class="card__header-link text-bold">View All</a>
+                </div>
+                <div class="settings">
+                  <div class="settings__block"><i class="fas fa-edit"></i></div>
+                  <div class="settings__block"><i class="fas fa-cog"></i></div>
+                </div>
+              </div>
+              <div id="chartdiv"></div>
+            </div> -->
+
+          </div>
+        </main>
+
+        <div class="book__form modal" id="login-form">
+          <form action="#" class="form u-margin-bottom-medium">
+              <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary" style="font-size: 2.5rem;">
+                      New Issue
+                  </h2>    
+              </div>
+
+              <div class="form__group" >
+                  <textarea name="issue" id="issue" cols="20" rows="10" class="form__input" placeholder="Add New Issue"></textarea>
+                  <label for="issue" class="form__label">Typing...</label>
+              </div>                          
+
+              <div class="form__group">
+                  <button class="btn btn--green">Submit &rarr;</button>
+              </div>
+          </form>
+        </div>
+   
+    <!-- FOOTER ------------------------------------------------------------------------------------------------------------------------------------->
+
+        <footer class="footer">
+          <p><span class="footer__copyright">&copy;</span> SBG DA-IICT</p>
+          <p>Crafted with <i class="fas fa-heart footer__icon"></i> by <a href="#" target="_blank" class="footer__signature"> Milek </a> & <a href="#" target="_blank" class="footer__signature"> Sanket </a></p>
+        </footer>
+      </div>
+
+      
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+<script>
+    $('a.open-modal').click(function(event) {
+      $("#fade").modal({
+          fadeDuration: 100
+      });
+    });
+</script>
+
+<script src="dashboard.js"></script>
+
+</html>
