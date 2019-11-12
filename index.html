@@ -11,9 +11,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <!-- <link rel="shortcut icon" type="image/png" href="#"> -->
-
 
 
 
@@ -98,84 +95,11 @@
               <li>
                 <div class="navList__subheading row row--align-v-center">
                   <span class="navList__subheading-icon"><i class="fas fa-book-open"></i></span>
-                  <span class="navList__subheading-title"> <a href="#login-form" rel="modal:open" style="color: inherit;text-decoration: none;"> Report New Issue</a></span>
+                  <span class="navList__subheading-title"> <a href="#issue-form" rel="modal:open" style="color: inherit;text-decoration: none;"> Report New Issue</a></span>
                 </div>
               </li>
               
       
-              <!-- <li class="navList__heading">photo album<i class="far fa-image"></i></li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-mountain"></i></span>
-                  <span class="navList__subheading-title">vacation</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">cambodia</li>
-                  <li class="subList__item">new york</li>
-                </ul>
-              </li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
-                  <span class="navList__subheading-title">anniversary</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">dive trip</li>
-                  <li class="subList__item">hikathon</li>
-                  <li class="subList__item">buffalo river</li>
-                </ul>
-              </li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-graduation-cap"></i></span>
-                  <span class="navList__subheading-title">university</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">wild horse saloon</li>
-                  <li class="subList__item">service corps</li>
-                  <li class="subList__item">graduation</li>
-                  <li class="subList__item">internships</li>
-                </ul>
-              </li> -->
-      
-              <!-- <li class="navList__heading">statistics<i class="fas fa-chart-bar"></i></li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
-                  <span class="navList__subheading-title">finances</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">mortgage</li>
-                  <li class="subList__item">investments</li>
-                  <li class="subList__item">spend log</li>
-                  <li class="subList__item">owed</li>
-                </ul>
-              </li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-phone"></i></span>
-                  <span class="navList__subheading-title">call stats</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">last month</li>
-                  <li class="subList__item">bi-weekly</li>
-                  <li class="subList__item">yesterday</li>
-                  <li class="subList__item">today</li>
-                </ul>
-              </li>
-              <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fas fa-plane"></i></span>
-                  <span class="navList__subheading-title">trip logs</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">amsterdam</li>
-                  <li class="subList__item">buenos aires</li>
-                  <li class="subList__item">cambodia</li>
-                  <li class="subList__item">greenland</li>
-                </ul>
-              </li> -->
-              
               <li class="navList__heading">Events<i class="fas fa-calendar-alt"></i></li>
               <li>
                 <div class="navList__subheading row row--align-v-center">
@@ -305,7 +229,7 @@
              
               <div class="card__header">
                 <div class="card__header-title text-light">SBG <strong>Issues</strong>
-                  <a href="#popup" class="card__header-link text-bold">&nbsp;&nbsp; Add Issue &nbsp;<i class="fas fa-plus"></i></a>
+                  <a href="#issue-form" rel="modal:open" class="card__header-link text-bold">&nbsp;&nbsp; Add Issue &nbsp;<i class="fas fa-plus"></i></a>
                 </div>
                 <!-- <div class="settings">
                   <div class="settings__block"><i class="fas fa-edit"></i></div>
@@ -509,21 +433,21 @@
           </div>
         </main>
 
-        <div class="book__form modal" id="login-form">
-          <form action="#" class="form u-margin-bottom-medium">
-              <div class="u-margin-bottom-medium">
-                  <h2 class="heading-secondary" style="font-size: 2.5rem;">
+        <div class="book__form popup modal" id="issue-form">
+          <form action="#" class="form">
+              <div>
+                  <h2 class="heading-secondary" style="font-size: 2.4rem;"">
                       New Issue
                   </h2>    
               </div>
 
               <div class="form__group" >
-                  <textarea name="issue" id="issue" cols="20" rows="10" class="form__input" placeholder="Add New Issue"></textarea>
-                  <label for="issue" class="form__label">Typing...</label>
+                  <textarea name="issue" id="issue" cols="20" rows="10" class="form__input" style="padding:1.5rem 0rem;font-weight: 300;font-size: 1.1rem;" placeholder="Add New Issue"></textarea>
+                  <label for="issue" class="form__label" style="margin-left:0;font-weight:300;font-size:1.1rem;">Typing...</label>
               </div>                          
 
               <div class="form__group">
-                  <button class="btn btn--green">Submit &rarr;</button>
+                  <button class="btn btn--green" style="padding: 0.6rem 2rem;font-size: 1.3rem;">Submit &rarr;</button>
               </div>
           </form>
         </div>
@@ -542,13 +466,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
-<script>
+<!-- <script>
     $('a.open-modal').click(function(event) {
-      $("#fade").modal({
-          fadeDuration: 100
+      $(this).modal({
+          fadeDuration: 250
       });
+      return false;
     });
-</script>
+</script> -->
 
 <script src="dashboard.js"></script>
 
